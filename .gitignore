@@ -7,3 +7,8 @@ test.log
 
 # editor temporaries
 *~
+data/*.shp
+data/*.cpg
+data/*.dbf
+data/*.prj
+data/*.shx
