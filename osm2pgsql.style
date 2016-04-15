@@ -103,6 +103,36 @@ node,way   roof:material         text         polygon
 node,way   roof:orientation         text         polygon
 node,way   roof:shape         text         polygon
 
+# Architecture additions
+node,way   architect                      text polygon
+node,way   building:condition             text polygon
+node,way   building:structure             text polygon
+node,way   building:architecture	  text polygon
+node,way   building:architecture:historic text polygon
+node,way   building:architecture:typology text polygon
+
+node,way   roof:structure                 text polygon
+
+node,way   start_date                     text polygon
+
+way        urban:typology                 text polygon
+
+# Heritage and historic
+node,way   heritage                       text polygon
+node,way   heritage:operator              text polygon
+node,way   ref:whc                        text polygon
+# experiment node,way   ref:*                          text polygon
+# experiment *:inscripton_date            text polygon
+
+#Wikipedia and media
+node,way   wikipedia                      text polygon
+node,way   wikidata                       text polygon
+node,way   image                          text polygon
+# node,way   website                        text polygon
+
+#  End of Architecture Additions
+
+
 # poipond extras (mike likes comedy clubs)
 node,way   theatre:genre    text    linear
 node,way   osm_version      text    linear

@@ -1,0 +1,33 @@
+SELECT
+    "name",
+    "addr:housename",
+    "addr:housenumber",
+    "addr:street",
+    "addr:postcode",
+    "addr:city",
+    "addr:country",
+    "phone",
+    "website",
+    "tourism",
+    "architect",
+    "building",
+    "historic",
+    "wikipedia",
+    "wikidata",
+    "start_date",
+    "heritage",
+    "heritage:operator",
+    "ref:whc",
+    "image",
+    way_area::bigint AS area,
+    {% filter geometry %}way{% endfilter %} AS __geometry__,
+    osm_id AS __id__
+  
+FROM 
+    planet_osm_polygon
+
+WHERE
+    "historic" IS NOT NULL OR "heritage" IS NOT NULL
+
+    AND {{ bounds|bbox_filter('way') }}
+
